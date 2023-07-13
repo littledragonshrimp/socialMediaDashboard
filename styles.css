@@ -247,4 +247,38 @@ input:checked + .slider:before {
 
 .negative {
   color: hsl(356, 69%, 56%);
+}
+
+@media only screen and (min-width: 900px) {
+  body, * {
+    margin: 0;
+  }
+  .top {
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-between;
+  }
+  .top .followers {
+    font-weight: 500;
+    color: hsl(228, 12%, 44%);
+  }
+  .line {
+    display: none;
+  }
+  .dark {
+    margin-right: 0.5rem;
+  }
+  .followers {
+    flex-direction: row;
+  }
+  .followers .block {
+    width: 22%;
+    min-width: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .overviewCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */

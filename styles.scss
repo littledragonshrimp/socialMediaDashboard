@@ -124,6 +124,7 @@ body, *{
 .title{
     margin-bottom: .5rem;
 }
+
 .count{
     letter-spacing: -.1rem;
 }
@@ -290,3 +291,47 @@ body, *{
     // background-repeat: no-repeat;
     // background-position: 10%;
 }// 
+
+////
+//Desktop Mode
+
+@media only screen and (min-width: 900px) {
+
+    body, *{
+        margin: 0;
+    }
+
+    .top{
+        flex-direction: row;
+        text-align: start;
+        justify-content: space-between;
+        .followers{
+            font-weight: 500;
+            color: $text1;
+        }
+    }
+
+    .line{
+        display: none;
+    }
+
+    .dark{
+        margin-right: .5rem;
+    }
+
+    .followers{
+        flex-direction: row;
+        .block{
+            width: 22%;
+            min-width: 10rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .overviewCards{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+}
