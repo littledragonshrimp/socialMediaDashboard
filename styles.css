@@ -1,0 +1,241 @@
+body, * {
+  padding: 0;
+  margin: 0;
+  font-family: "inter", sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.top {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.dark {
+  color: hsl(228, 12%, 44%);
+  font-weight: 500;
+}
+
+.line {
+  border: 1px solid black;
+}
+
+.toggleSection {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.slider:hover {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 30px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(230, 22%, 74%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(-26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.followers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.block-1-followers {
+  letter-spacing: 0.2rem;
+  color: hsl(228, 12%, 44%);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.addLossNumber {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: hsl(163, 72%, 41%);
+}
+
+.arrowIcon {
+  margin-bottom: 4px;
+}
+
+.block {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(227, 47%, 96%);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 1rem;
+  min-height: 8rem;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  color: hsl(228, 12%, 44%);
+}
+
+.facebook {
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+
+.twitter {
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+
+.insta {
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.onlyTop {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/*   &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: .5rem; 
+        padding: 3px; 
+        background:linear-gradient(to right,red,blue); 
+        -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude; 
+    }
+*/
+.youtube {
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+
+.count {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.blockIcon {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.name {
+  position: relative;
+  top: -5px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.overview h2 {
+  margin: 1rem 2rem 0 2rem;
+}
+
+.card {
+  padding: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 0.5rem;
+}
+
+.cardTop {
+  color: hsl(228, 12%, 44%);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.cardBot {
+  display: flex;
+  margin: 1rem;
+}
+.cardBot .arrow {
+  align-items: center;
+  line-height: 1.5rem;
+  margin-left: auto;
+  margin-right: 0.2rem;
+}
+.cardBot .arrow img {
+  min-width: 10px;
+}
+
+.viewCount {
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.percentage {
+  line-height: 2rem;
+  color: hsl(163, 72%, 41%);
+}
+
+.negative {
+  color: hsl(356, 69%, 56%);
+}/*# sourceMappingURL=styles.css.map */
