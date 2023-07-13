@@ -15,23 +15,11 @@ function slideClicked() {
     console.log("else clicked");
   }
 }
-
 slider.addEventListener("click", slideClicked);
 
-// function coloredNum() {
-//   if (colorNumber[3].textContent.includes("-")) {
-//     colorNumber[3].classList.add("negative");
-//     console.log("has negative numbers");
-//   }
-// }
-//
-// coloredNum();
-
-const colorNumbers = document.getElementsByClassName("addLossNumber");
-
 function coloredNum() {
-  for (let i = 0; i < colorNumbers.length; i++) {
-    const addLossNum = colorNumbers[i];
+  for (let i = 0; i < colorNumber.length; i++) {
+    const addLossNum = colorNumber[i];
     if (addLossNum.textContent.includes("-")) {
       addLossNum.classList.add("negative");
       addLossNum.style.color = "$red";
@@ -40,7 +28,6 @@ function coloredNum() {
     }
   }
 }
-
 coloredNum();
 
 const percentElements = Array.from(
@@ -58,15 +45,3 @@ function coloredPercentage() {
 }
 
 coloredPercentage();
-
-// function coloredNum() {
-//   for (let i = 0; i < colorNumbers.length; i++) {
-//     const addLossNum = colorNumbers[i];
-//     if (addLossNum.textContent.includes("-")) {
-//       addLossNum.classList.add("negative");
-//       console.log("has negative numbers");
-//     }
-//   }
-// }
-//
-// coloredNum();
