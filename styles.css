@@ -95,8 +95,17 @@ input:checked + .slider:before {
   justify-content: space-evenly;
 }
 
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.count {
+  letter-spacing: -0.1rem;
+}
+
 .block-1-followers {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  font-size: 13px;
   color: hsl(228, 12%, 44%);
   margin-bottom: 1rem;
   text-transform: uppercase;
