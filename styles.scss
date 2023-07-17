@@ -9,6 +9,7 @@ $youtube: hsl(348, 97%, 39%);
 $toggle: hsl(230, 22%, 74%);
 // Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
 
+//light mode
 $white: hsl(0, 0%, 100%);
 $blue: hsl(225, 100%, 98%);
 $blockBG: hsl(227, 47%, 96%);
@@ -16,13 +17,22 @@ $text1: hsl(228, 12%, 44%);
 $text2: hsl(230, 17%, 14%);
 
 
+html[data-theme="dark"] {
+    $DarkBG: hsl(230, 17%, 14%);
+    $DarkTopBG: hsl(232, 19%, 15%);
+    $DarkCard: hsl(228, 28%, 20%);
+    $DarkText: hsl(228, 34%, 66%);
+}
+
+
 body, *{
     padding: 0;
     margin: 0;
     font-family: "inter", sans-serif;
+    & .darkMode{
+        background: green;
+    }
 }
-
-
 
 .main{
     display: flex;
@@ -74,11 +84,10 @@ body, *{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    background-color: $toggle;
+
     &:hover{
-        background: linear-gradient( to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        background: $DarkCard;
     }
   }
   
@@ -89,13 +98,14 @@ body, *{
     width: 26px;
     left: 30px;
     bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    background-color: $white;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   
   input:checked + .slider {
     background-color: $toggle;
+    transition: .5s;
   }
   
   
@@ -103,6 +113,7 @@ body, *{
     -webkit-transform: translateX(-26px);
     -ms-transform: translateX(-26px);
     transform: translateX(-26px);
+    transition: .5s;
   }
   
   /* Rounded sliders */
@@ -165,6 +176,9 @@ body, *{
     border-top-left-radius: .3rem;
     border-top-right-radius: .3rem;
     margin-bottom: 1rem;
+    & .darkMode{
+        background: $DarkCard;
+    }
   }
 
 .name{
@@ -291,7 +305,15 @@ body, *{
     // background-repeat: no-repeat;
     // background-position: 10%;
 }// 
-
+.darkMode{
+    .blocks{
+        background-color: black;
+    }
+    html{
+        background-color: black;
+    }
+   
+}
 ////
 //Desktop Mode
 
@@ -331,7 +353,15 @@ body, *{
 
     .overviewCards{
        display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-columns: repeat(4, 1fr);     
     }
-    
+
+    .card{
+        margin: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .percentage{
+        line-height: 2rem;
+    }
 }
