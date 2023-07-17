@@ -3,7 +3,9 @@ const checkbox = document.getElementsByClassName("checkbox");
 const colorNumber = document.getElementsByClassName("addLossNumber");
 const percent = document.getElementsByClassName("percentage");
 const blocks = document.getElementsByClassName("block");
-let checkTheme = document.querySelector("input[name=theme]");
+var followers = document.getElementById("followers");
+var themeSwitchInput = document.querySelector("#toggle");
+var body = document.querySelector("body");
 
 //change to dark mode
 
@@ -30,25 +32,26 @@ function slideClicked() {
     slider.style.background =
       "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))";
     isSliderActive = true;
-
-    document.html.classList.add("darkMode");
-
-    //  for (let i = 0; i < blocks.length, i++; ) {
-    //    blocks[i].classList.add("darkMode");
-    //  }
   } else {
     slider.style.background = "hsl(230, 22%, 74%)";
     isSliderActive = false;
-
-    //  for (let i = 0; i < blocks.length, i++; ) {
-    //    blocks[i].classList.remove("darkMode");
-    //  }
 
     console.log("Clicked: white");
   }
 }
 
 slider.addEventListener("click", slideClicked);
+
+///color input change
+themeSwitchInput.addEventListener("click", function () {
+  if (body.classList.contains("darkMode")) {
+    body.classList.remove("darkMode");
+    followers.classList.remove("darkMode");
+  } else {
+    body.classList.add("darkMode");
+    followers.classList.add("darkMode");
+  }
+});
 
 function coloredNum() {
   for (let a = 0; a < colorNumber.length; a++) {

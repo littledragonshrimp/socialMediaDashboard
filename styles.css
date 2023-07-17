@@ -4,7 +4,11 @@ body, * {
   font-family: "inter", sans-serif;
 }
 body .darkMode, * .darkMode {
-  background: green;
+  background: hsl(230, 17%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+body .darkMode p, * .darkMode p {
+  color: white;
 }
 
 .main {
@@ -139,9 +143,6 @@ input:checked + .slider:before {
   border-top-right-radius: 0.3rem;
   margin-bottom: 1rem;
 }
-.block .darkMode {
-  background: hsl(228, 28%, 20%);
-}
 
 .name {
   color: hsl(228, 12%, 44%);
@@ -254,13 +255,6 @@ input:checked + .slider:before {
 
 .negative {
   color: hsl(356, 69%, 56%);
-}
-
-.darkMode .blocks {
-  background-color: black;
-}
-.darkMode html {
-  background-color: black;
 }
 
 @media only screen and (min-width: 900px) {
