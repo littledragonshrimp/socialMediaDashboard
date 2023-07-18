@@ -34,7 +34,7 @@ function slideClicked() {
     isSliderActive = true;
   } else {
     slider.style.background = "hsl(230, 22%, 74%)";
-    isSliderActive = false;
+    slider.isSliderActive = false;
 
     console.log("Clicked: white");
   }

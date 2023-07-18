@@ -5,10 +5,6 @@ body, * {
 }
 body .darkMode, * .darkMode {
   background: hsl(230, 17%, 14%);
-  color: hsl(0, 0%, 100%);
-}
-body .darkMode p, * .darkMode p {
-  color: white;
 }
 
 .main {
@@ -107,8 +103,13 @@ input:checked + .slider:before {
   margin-bottom: 0.5rem;
 }
 
+.titleFollowers {
+  color: hsl(228, 12%, 44%);
+}
+
 .count {
   letter-spacing: -0.1rem;
+  color: hsl(230, 17%, 14%);
 }
 
 .block-1-followers {
@@ -142,6 +143,10 @@ input:checked + .slider:before {
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
   margin-bottom: 1rem;
+}
+
+.block:hover {
+  filter: brightness(1.02);
 }
 
 .name {
@@ -190,6 +195,9 @@ input:checked + .slider:before {
 .count {
   font-size: 2.5rem;
   font-weight: 700;
+}
+.count .darkMode {
+  color: black;
 }
 
 .blockIcon {
@@ -257,6 +265,40 @@ input:checked + .slider:before {
   color: hsl(356, 69%, 56%);
 }
 
+.darkMode .card {
+  background-color: hsl(228, 28%, 20%);
+}
+.darkMode .card:hover {
+  background-color: hsl(232, 19%, 30%);
+}
+.darkMode .block {
+  background-color: hsl(228, 28%, 20%);
+}
+.darkMode .block:hover {
+  background-color: hsl(232, 19%, 30%);
+}
+.darkMode .count {
+  color: white;
+}
+.darkMode .block-1-followers {
+  color: hsl(228, 12%, 44%);
+}
+.darkMode h1 {
+  color: white;
+}
+.darkMode p {
+  color: hsl(228, 34%, 66%);
+}
+.darkMode .viewCount {
+  color: white;
+}
+.darkMode .overview h2 {
+  color: white;
+}
+.darkMode .attribution {
+  color: white;
+}
+
 @media only screen and (min-width: 900px) {
   body, * {
     margin: 0;
@@ -293,6 +335,9 @@ input:checked + .slider:before {
     margin: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .card:hover {
+    filter: brightness(1.02);
   }
   .percentage {
     line-height: 2rem;

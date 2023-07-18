@@ -17,11 +17,10 @@ $text1: hsl(228, 12%, 44%);
 $text2: hsl(230, 17%, 14%);
 
 //dark mode
-$DarkBG: hsl(230, 17%, 14%);
+// $DarkBG: hsl(230, 17%, 14%);
 $DarkTopBG: hsl(232, 19%, 15%);
 $DarkCard: hsl(228, 28%, 20%);
 $DarkText: hsl(228, 34%, 66%);
-
 
 
 body, *{
@@ -29,11 +28,7 @@ body, *{
     margin: 0;
     font-family: "inter", sans-serif;
     & .darkMode{
-        background: $DarkBG;
-        color: $white;
-        p{
-            color: white;
-        }
+        background: hsl(230, 17%, 14%);
     }
 }
 
@@ -48,6 +43,7 @@ body, *{
     flex-direction: column;
     line-height: 2rem;
 }
+
 
 .dark{
     color: $text1;
@@ -90,7 +86,7 @@ body, *{
     background-color: $toggle;
 
     &:hover{
-        background: $DarkCard;
+        background: hsl(228, 28%, 20%);
     }
   }
   
@@ -138,8 +134,15 @@ body, *{
     margin-bottom: .5rem;
 }
 
+.titleFollowers{
+    color: $text1;
+}
+
 .count{
     letter-spacing: -.1rem;
+
+    //switch color
+    color: $text2;
 }
 
 .block-1-followers{
@@ -166,7 +169,11 @@ body, *{
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    //switch color
     background-color: $blockBG;
+  
+
 
     margin-left: 2rem;
     margin-right: 2rem;
@@ -179,6 +186,9 @@ body, *{
     border-top-right-radius: .3rem;
     margin-bottom: 1rem;
   }
+.block:hover{
+    filter: brightness(1.02);
+}
 
 .name{
     color: $text1;
@@ -230,6 +240,9 @@ body, *{
   .count{
     font-size: 2.5rem;
     font-weight: 700;
+    & .darkMode{
+        color: black;
+    }
   }
 
 .blockIcon{
@@ -258,6 +271,7 @@ body, *{
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 1rem;
+    // shift color
     background-color: $blockBG;
     border-radius: .5rem;
 }
@@ -303,6 +317,51 @@ body, *{
     // background-repeat: no-repeat;
     // background-position: 10%;
 }// 
+
+
+.darkMode{
+    .card{
+        background-color: hsl(228, 28%, 20%);
+    }
+    .card:hover{
+        background-color: hsl(232, 19%, 30%);
+    }
+    .block{
+        background-color: hsl(228, 28%, 20%);
+    }
+    .block:hover{
+        background-color: hsl(232, 19%, 30%);
+    }
+    .count{
+        color: white;
+    }
+    .block-1-followers{
+        color:hsl(228, 12%, 44%);
+    }
+    h1{
+        color: white;
+    }
+    p{
+        color: hsl(228, 34%, 66%);
+    }
+    .viewCount{
+        color: white;
+    }
+    .overview h2{
+        color: white;
+    }
+
+    .attribution{
+        color: white;
+    }
+
+
+//dark mode
+// $DarkBG: hsl(230, 17%, 14%);
+// $DarkTopBG: hsl(232, 19%, 15%);
+
+// $DarkText: hsl(228, 34%, 66%);
+}
 
 ////
 //Desktop Mode
@@ -351,6 +410,11 @@ body, *{
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    .card:hover{
+        filter: brightness(1.02);
+    }
+
     .percentage{
         line-height: 2rem;
     }
